@@ -16,6 +16,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css" />
     <!-- endbuild -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script type="application/ld+json">
       {
         "@context": "http://schema.org/",
@@ -79,7 +80,7 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="#">Career</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">The Wall</a></li>
+                        <!-- <li><a href="#">The Wall</a></li> -->
                     </ul>
                     <a href="maito:madhavan@madarth.com">madhavan@madarth.com
                         <i class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -94,34 +95,36 @@
         </div>
     </header>
     <main>
-        <section class="display__container--box home:intro padding:top:80px padding:bottom:80px">
-            <h1 class="">Unified approach with
-                <span>creative synergy</span>
+        <section class="display__container--box home__intro">
+            <h1 data-aos="fade-up" >Unified approach with<br>
+                <span data-aos="fade-up" data-aos-delay="200" >creative synergy</span>
             </h1>
-            <p>Like any self-respecting agency worth its weight in salt, we celebrate big ideas. And we go to great
+            <p data-aos="fade-up" data-aos-delay="300"  >Like any self-respecting agency worth its weight in salt, we celebrate big ideas. And we go to great
                 lengths to make them work on omni-channel, carefully optimising every platform for maximum traction and
                 results. Our secret sauce however, is something we’ll save up for a conversation over kaapi.</p>
         </section>
         <section
-            class="display__container--fluid work--lists color:background:black padding:top:120px padding:bottom:120px">
+            class="display__container--fluid work--lists color:background:black ">
             <div class="display__container--box">
-                <div class="section__title--cta">
+                <div class="section__title--cta"  data-aos="fade-up">
                     <h2 class="font-size:36px">Work</h2>
                 </div>
                 <div class="project--lists">
-                    <a href="./work/annpoorna-masala.html" class="project--list">
-                        <div class="project--card">
-                            <div class="project--card_image">
+                    <a href="./work/annpoorna-masala.html" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <div class="project__card--image--wrapper">
                                 <img src="./images/page-annapoorna.png" alt="">
+                                </div>
                             </div>
-                            <div class="project--content">
-                                <div class="project--card_name">
+                            <div class="project__content">
+                                <div class="project__card--name">
                                     ANNAPOORNA
                                 </div>
-                                <div class="project--card_title">
+                                <div class="project__card--title">
                                     Lorem ipsum dolor sit amet consectetur. Mauris tincidunt id pellentesque
                                 </div>
-                                <div class="project--card_tags">
+                                <div class="project__card--tags">
                                     <span>Branding</span>
                                     <span>UI/UX</span>
                                     <span>Website</span>
@@ -129,38 +132,42 @@
                             </div>
                         </div>
                     </a>
-                    <a href="./work/aha.html" class="project--list">
-                        <div class="project--card">
-                            <div class="project--card_image">
+                    <a href="./work/aha.html" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                 <div class="project__card--image--wrapper">
                                 <img src="./images/page-aha.png" alt="">
+                                </div>
                             </div>
-                            <div class="project--content">
-                                <div class="project--card_name">
+                            <div class="project__content">
+                                <div class="project__card--name">
                                     AHA
                                 </div>
-                                <div class="project--card_title">
+                                <div class="project__card--title">
                                     omnichannel campaign for a streaming platform
                                 </div>
-                                <div class="project--card_tags">
+                                <div class="project__card--tags">
                                     <span>Omni channel campaign</span>
                                     <span>Entertainment</span>
                                 </div>
                             </div>
                         </div>
                     </a>
-                    <a href="./work/sundari-silks.html" class="project--list">
-                        <div class="project--card">
-                            <div class="project--card_image">
+                    <a href="./work/sundari-silks.html" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                 <div class="project__card--image--wrapper">
                                 <img src="./images/page-sundarisilks.png" alt="">
+                                </div>
                             </div>
-                            <div class="project--content">
-                                <div class="project--card_name">
+                            <div class="project__content">
+                                <div class="project__card--name">
                                     SUNDARI SILKS
                                 </div>
-                                <div class="project--card_title">
+                                <div class="project__card--title">
                                     Lorem ipsum dolor sit amet consectetur. Mauris tincidunt id pellentesque
                                 </div>
-                                <div class="project--card_tags">
+                                <div class="project__card--tags">
                                     <span>Branding</span>
                                     <span>UI/UX</span>
                                     <span>Website</span>
@@ -168,38 +175,42 @@
                             </div>
                         </div>
                     </a>
-                    <a href="./work/amul.html" class="project--list">
-                        <div class="project--card">
-                            <div class="project--card_image">
+                    <a href="./work/amul.html" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <div class="project__card--image--wrapper">
                                 <img src="./images/page-amul.png" alt="">
+                                </div>
                             </div>
-                            <div class="project--content">
-                                <div class="project--card_name">
+                            <div class="project__content">
+                                <div class="project__card--name">
                                     AMUL
                                 </div>
-                                <div class="project--card_title">
+                                <div class="project__card--title">
                                     From Gujarat Karan to Namooru Karan: Journey of Amul in TN
                                 </div>
-                                <div class="project--card_tags">
+                                <div class="project__card--tags">
                                     <span>Social Media Strategy</span>
                                     <span>FMCG</span>
                                 </div>
                             </div>
                         </div>
                     </a>
-                    <a href="./work/chennai-super-silks.html" class="project--list">
-                        <div class="project--card">
-                            <div class="project--card_image">
+                    <a href="./work/chennai-super-silks.html" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <div class="project__card--image--wrapper">
                                 <img src="./images/page-nova.png" alt="">
+                                </div>
                             </div>
-                            <div class="project--content">
-                                <div class="project--card_name">
+                            <div class="project__content">
+                                <div class="project__card--name">
                                     CHENNAI SUPER KINGS
                                 </div>
-                                <div class="project--card_title">
+                                <div class="project__card--title">
                                     Lorem ipsum dolor sit amet consectetur. Mauris tincidunt id pellentesque
                                 </div>
-                                <div class="project--card_tags">
+                                <div class="project__card--tags">
                                     <span>Branding</span>
                                     <span>UI/UX</span>
                                     <span>Website</span>
@@ -207,19 +218,21 @@
                             </div>
                         </div>
                     </a>
-                    <a href="./work/nova.html" class="project--list">
-                        <div class="project--card">
-                            <div class="project--card_image">
+                    <a href="./work/nova.html" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <div class="project__card--image--wrapper">
                                 <img src="./images/page-nova.png" alt="">
+                                </div>
                             </div>
-                            <div class="project--content">
-                                <div class="project--card_name">
+                            <div class="project__content">
+                                <div class="project__card--name">
                                     NOVA
                                 </div>
-                                <div class="project--card_title">
+                                <div class="project__card--title">
                                     Lorem ipsum dolor sit amet consectetur. Mauris tincidunt id pellentesque
                                 </div>
-                                <div class="project--card_tags">
+                                <div class="project__card--tags">
                                     <span>Branding</span>
                                     <span>UI/UX</span>
                                     <span>Website</span>
@@ -227,19 +240,21 @@
                             </div>
                         </div>
                     </a>
-                    <a href="./work/nttf.html" class="project--list">
-                        <div class="project--card">
-                            <div class="project--card_image">
+                    <a href="./work/nttf.html" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <div class="project__card--image--wrapper">
                                 <img src="./images/page-nova.png" alt="">
+                                </div>
                             </div>
-                            <div class="project--content">
-                                <div class="project--card_name">
+                            <div class="project__content">
+                                <div class="project__card--name">
                                     NTTF
                                 </div>
-                                <div class="project--card_title">
+                                <div class="project__card--title">
                                     Lorem ipsum dolor sit amet consectetur. Mauris tincidunt id pellentesque
                                 </div>
-                                <div class="project--card_tags">
+                                <div class="project__card--tags">
                                     <span>Branding</span>
                                     <span>UI/UX</span>
                                     <span>Website</span>
@@ -247,19 +262,21 @@
                             </div>
                         </div>
                     </a>
-                    <a href="./work/race.html" class="project--list">
-                        <div class="project--card">
-                            <div class="project--card_image">
+                    <a href="./work/race.html" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <div class="project__card--image--wrapper">
                                 <img src="./images/page-race.png" alt="">
+                                </div>
                             </div>
-                            <div class="project--content">
-                                <div class="project--card_name">
+                            <div class="project__content">
+                                <div class="project__card--name">
                                     RACE
                                 </div>
-                                <div class="project--card_title">
+                                <div class="project__card--title">
                                     Lorem ipsum dolor sit amet consectetur. Mauris tincidunt id pellentesque
                                 </div>
-                                <div class="project--card_tags">
+                                <div class="project__card--tags">
                                     <span>Branding</span>
                                     <span>UI/UX</span>
                                     <span>Website</span>
@@ -270,30 +287,20 @@
                 </div>
             </div>
         </section>
-        <section class="display__container--box main:follow:up padding:top:80px padding:bottom:80px margin:top:64px">
-            <p>Conversation over a cup of filter coffee?</p>
-            <a href="index.html">We are here</a>
+        <section class="display__container--fluid main:follow:up ">
+            <div class="display__container--box">
+            <p data-aos="fade-up" >Conversation over a cup of filter coffee?</p>
+            <a data-aos="fade-up"  data-aos-delay="300" href="index.html">We are here</a>
+            </div>
         </section>
     </main>
     <footer></footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/jquery-slim.js"></script>
+    <script src="scripts/aos.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-    <script>
-    const d = new Date();
-    let text = d.toLocaleTimeString();
-    document.getElementById("header__time").innerHTML = text;
-    $(document).ready(function () {
-        $('#menu').click(function () {
-            // Toggle 'active' class on the navList
-            $('.header__navlist').toggleClass('menu__active');
-            // Toggle 'menu--noscroll' class on the body
-            $('body').toggleClass('menu--noscroll');
-        });
-    });
-    </script>
 </body>
 
 </html>

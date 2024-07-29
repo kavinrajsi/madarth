@@ -6,3 +6,52 @@
 .h6{}
 
 p,.p1{}
+
+
+
+.header\:1,
+.font-size\:80px {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 600;
+  color: #111111;
+  // font-size: 80px;
+  // line-height: 80px;
+  @include interpolate("font-size", 768px, 40px, 992px, 80px, "ease-in");
+  @include interpolate("line-height", 768px, 40px, 992px, 80px, "ease-in");
+}
+
+.header\:3,
+.font-size\:36px {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+}
+.header\:4,
+.font-size\:28px {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  color: #111111;
+}
+
+a {
+  padding: 4px 8px;
+  // background-color: red;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  span {
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;
+  }
+}

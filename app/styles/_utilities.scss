@@ -1,0 +1,60 @@
+
+// Map of class names to font weights
+$weights: (
+  "thin": 100,
+  "extralight": 200,
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+  "black": 900,
+);
+
+// Loop through the map to create classes
+@each $name, $weight in $weights {
+  .font\:weight\:#{$name} {
+    font-weight: $weight;
+  }
+}
+
+@mixin padding($direction, $value) {
+  .padding\:#{$direction}\:#{$value} {
+    padding-#{$direction}: $value;
+  }
+}
+
+@include padding(bottom, 8px);
+@include padding(bottom, 16px);
+@include padding(bottom, 24px);
+@include padding(top, 32px);
+@include padding(top, 48px);
+@include padding(top, 40px);
+@include padding(bottom, 32px);
+@include padding(bottom, 40px);
+@include padding(bottom, 48px);
+@include padding(top, 120px);
+@include padding(top, 80px);
+@include padding(bottom, 80px);
+@include padding(bottom, 120px);
+@include padding(right, 0px);
+@include padding(left, 0px);
+
+
+@media(min-width: 768px){
+.margin\:top\:64px {
+    margin-top: 64px;
+  }
+}
+
+.height\:auto {
+  height: auto;
+}
+.width\:auto {
+  width: auto;
+}
+.width\:100 {
+  width: 100%;
+}
+

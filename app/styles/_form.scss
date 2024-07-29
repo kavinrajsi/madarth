@@ -1,0 +1,59 @@
+form {
+    padding-top: 40px;
+    .form--title {
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 52px;
+      /* identical to box height, or 108% */
+      /* Primary/Secondary Black */
+      color: #8d8d8d;
+      padding-bottom: 24px;
+    }
+    p {
+      padding-bottom: 24px;
+    }
+    label {
+      width: 100%;
+      display: block;
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 22px;
+      /* identical to box height, or 110% */
+      color: #ffffff;
+    }
+    .wpcf7-textarea {
+      resize: none;
+      height: 100px;
+    }
+    .wpcf7-form-control {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 22px;
+      color: #fff;
+      background-color: transparent;
+      padding: 6px 0;
+      border: 0;
+      width: 100%;
+      border-bottom: 1px solid #fff;
+    }
+    .wpcf7-submit {
+      padding: 12px 24px;
+      background-color: #fff;
+      font-family: "Anek Latin";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      /* identical to box height, or 114% */
+      /* Primary/Black */
+      color: #111111;
+    }
+    .form__wrapper {
+      padding-bottom: 24px;
+    }
+  }

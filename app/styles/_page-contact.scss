@@ -1,0 +1,32 @@
+.page__contact {
+    display: flex;
+    gap: 30px;
+    .content {
+      max-width: 532px;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+    &--title {
+      /* We are here */
+      font-family: "Caveat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 70px;
+      /* identical to box height, or 109% */
+      color: #f1b91a;
+      margin-bottom: 24px;
+    }
+    p {
+      /* Desktop_B1 */
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      /* or 120% */
+      color: #ffffff;
+    }
+
+  }
+  

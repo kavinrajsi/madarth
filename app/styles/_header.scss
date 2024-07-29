@@ -1,0 +1,111 @@
+header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @media (min-width: 768px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .display__container--box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .header__content {
+      @media (min-width: 768px) {
+        position: relative;
+      }
+      .header__nav {
+        display: flex;
+        align-items: center;
+      }
+      .header__country{
+        padding-right: 8px;
+      }
+      .header__country,
+      #header__time {
+        display: none;
+        font-family: var(--font-sans);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        /* identical to box height, or 112% */
+        letter-spacing: 0.05em;
+        /* Primary/Black */
+        color: #111111;
+        @media (min-width: 768px) {
+          display: inline-block;
+        }
+      }
+      .header__menu--button {
+        padding-left: 8px;
+        @media (min-width: 768px) {
+          margin-left: 160px;
+        }
+        button {
+          cursor: pointer;
+          border: 0;
+          background-color: transparent;
+          font-family: "Anek Latin";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 22px;
+          /* identical to box height, or 92% */
+          letter-spacing: 0.02em;
+          /* Primary/Black */
+          color: #111111;
+        }
+      }
+      .header__navlist {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 68px;
+        background-color: #ffffff;
+        margin-left: 16px;
+        margin-right: 16px;
+        @media (min-width: 768px) {
+          top: 61px;
+          margin: initial;
+          width: 432px;
+          padding-top: 32px;
+        }
+        &.menu__active {
+          display: block;
+        }
+        a {
+          display: block;
+          font-family: "Anek Latin";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          /* Primary/Black */
+          color: #111111;
+          margin-bottom: 8px;
+          @media (min-width: 768px) {
+            font-size: 32px;
+            line-height: 32px;
+            margin-bottom: 16px;
+          }
+        }
+        ul {
+          + a {
+            /* Desktop_B2 */
+            font-family: "Anek Tamil";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px;
+            /* identical to box height, or 112% */
+            /* Primary/Black */
+            color: #111111;
+          }
+        }
+      }
+    }
+  }
+}

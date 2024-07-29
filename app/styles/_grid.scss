@@ -1,0 +1,59 @@
+
+.display__container--fluid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .display__container--box {
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+
+
+.display\:grid {
+  display: grid;
+}
+
+.display\:flex {
+  display: flex;
+}
+
+.gap\:20px {
+  gap: 20px;
+}
+
+.align\:items\:center {
+  align-items: center;
+}
+
+.justify-content\:space-between {
+  justify-content: space-between;
+}
+
+@mixin grid-columns($columns) {
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+}
+
+.grid\:column\:2 {
+  @include grid-columns(2);
+}
+
+.grid\:column\:3 {
+  @include grid-columns(3);
+}
+
+.grid\:column\:4 {
+  @include grid-columns(4);
+}
