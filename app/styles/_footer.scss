@@ -1,7 +1,7 @@
 .main\:follow\:up {
   background-color: #fff;
   @media (min-width: 768px) {
-    @include interpolate("margin-top", 768px, 32px, 992px, 64px, "ease-in");
+    // @include interpolate("margin-top", 768px, 32px, 992px, 64px, "ease-in");
   }
   @include interpolate("padding-top", 768px, 40px, 992px, 80px, "ease-in");
   @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
@@ -45,5 +45,60 @@
     font-size: 48px;
     line-height: 80px;
     color: #111111;
+  }
+}
+
+footer {
+  background-color: #000;
+  .footer__wrapper {
+    @include interpolate("padding-top", 768px, 30px, 992px, 60px, "ease-in");
+    @include interpolate("padding-bottom", 768px, 30px, 992px, 60px, "ease-in");
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @media (min-width: 820px) {
+      flex-direction: row;
+    }
+    p {
+      padding-top: 16px;
+      font-family: "Anek Tamil";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: #ffffff;
+    }
+    a,
+    address,
+    nav a {
+      padding-left: 0;
+      padding-right: 0;
+      display: block;
+      font-family: "Anek Tamil";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      color: #ffffff;
+    }
+    address {
+      padding-top: 32px;
+      line-height: normal;
+    }
+
+    .footer__nav--menu {
+      display: flex;
+      gap: 80px;
+    }
+
+    .footer__nav,
+    .footer__nav--policy,
+    .footer__nav--menu {
+      padding-top: 32px;
+
+      @media (min-width: 820px) {
+        padding-top: 0;
+      }
+    }
   }
 }
