@@ -164,14 +164,16 @@
     </main>
     <footer></footer>
 
+
+    <!-- build:js scripts/vendor.js -->
     <script src="scripts/jquery-slim.js"></script>
     <script src="scripts/aos.js"></script>
+    <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
      <script>
         const listItems = document.querySelectorAll('.our__ethos--lists li');
-        
         listItems.forEach((item, index) => {
             item.addEventListener('mouseover', () => {
                 listItems.forEach((li, liIndex) => {
@@ -184,7 +186,6 @@
                     }
                 });
             });
-            
             item.addEventListener('mouseout', () => {
                 listItems.forEach(li => {
                     li.style.opacity = '1'; // Reset opacity to default on mouse out
