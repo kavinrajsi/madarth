@@ -1,0 +1,68 @@
+.service__list--title {
+  /* Desktop_H3 */
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 44px;
+  /* identical to box height, or 110% */
+  /* Neutral/White */
+  color: #fff9f9;
+  padding-bottom: 30px;
+}
+.accordion-container {
+  border: 1px solid #d4d4d4;
+  border-radius: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-bottom: 16px;
+
+  h3 {
+    /* Desktop_H4 */
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    /* identical to box height, or 114% */
+    /* Neutral/White */
+    color: #fff9f9;
+  }
+  ul {
+    padding-top: 24px;
+    padding-left: 20px;
+    list-style: disc;
+    li {
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      /* or 120% */
+      /* Neutral/White */
+      color: #fff9f9;
+    }
+  }
+
+  &:hover {
+  background-color: #d4d4d4;
+  background-repeat: no-repeat;
+  background-position: center right;
+  &:nth-child(1) {
+    background-image: url("../images/service-transform-family-business.png");
+  }
+  &:nth-child(2) {
+    background-image: url("../images/service-indian-corporates.png");
+  }
+  &:nth-child(3) {
+    background-image: url("../images/service-global-brand.png");
+  }
+
+    h3,
+    ul li {
+      color: #000000;
+    }
+  }
+}
