@@ -62,7 +62,7 @@
   .project__content {
     position: relative;
     @media (min-width: 768px) {
-      transition: padding-left  0.3s ease-out, margin-left  0.3s ease-out ;
+      transition: padding-left 0.3s ease-out, margin-left 0.3s ease-out;
       padding-left: 30px;
       margin-left: 50px;
     }
@@ -71,7 +71,7 @@
         content: "";
       }
 
-      transition: width  0.3s ease-out, height 0.3s ease-out ;
+      transition: width 0.3s ease-out, height 0.3s ease-out;
       display: inline-block;
       width: 50px;
       height: 1px;
@@ -106,7 +106,7 @@
     color: #ffffff;
     padding-bottom: 16px;
     @media (min-width: 768px) {
-    max-width: 554px;
+      max-width: 554px;
     }
   }
   .project__card--tags span {
@@ -143,12 +143,107 @@
   }
 
   .project__content {
-    transition: padding-left  0.3s ease-out, margin-left  0.3s ease-out ;
+    transition: padding-left 0.3s ease-out, margin-left 0.3s ease-out;
     margin-left: 0;
     padding-left: 0;
     &::before {
-      transition: width  0.3s ease-out, height 0.3s ease-out ;
+      transition: width 0.3s ease-out, height 0.3s ease-out;
       width: 0;
     }
+  }
+}
+
+.section__single,
+.section__content,
+.section__title--content {
+  padding-bottom: 16px;
+  @media (min-width: 768px) {
+    padding-bottom: 32px;
+  }
+  video,
+  img {
+    width: 100%;
+  }
+  .text {
+    @media (min-width: 768px) {
+      flex: 0 0 645px;
+      max-width: 645px;
+    }
+  }
+}
+
+.section__content,
+.section__title--content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.project__detail--year {
+  /* Desktop_H3 */
+  font-family: "Anek Tamil";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 44px;
+  /* identical to box height, or 110% */
+  color: #000000;
+  padding-bottom: 16px;
+  @media (min-width: 768px) {
+    padding-bottom: 0px;
+  }
+}
+
+.project__detail--title {
+  /* Desktop_H3 */
+  font-family: "Anek Tamil";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 44px;
+  /* identical to box height, or 110% */
+  color: #000000;
+}
+.project__detail--description {
+  /* Desktop_H4 */
+  font-family: "Anek Tamil";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  /* identical to box height, or 114% */
+  /* Primary/Black */
+  color: #111111;
+}
+.project__detail--type {
+  /* Desktop_B1 */
+  font-family: "Anek Tamil";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+  color: #000000;
+  padding-bottom: 16px;
+  @media (min-width: 768px) {
+    padding-bottom: 0px;
+  }
+}
+.text p {
+  /* Desktop_B1 */
+  font-family: "Anek Tamil";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* or 120% */
+  /* Primary/Black */
+  color: #111111;
+  + p {
+    padding-top: 16px;
   }
 }
