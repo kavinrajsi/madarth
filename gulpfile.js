@@ -66,7 +66,7 @@ function lintTest() {
 };
 
 function html() {
-  return src('app/*.html')
+  return src('app/**/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
     .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
@@ -97,7 +97,8 @@ function fonts() {
 function extras() {
   return src([
     'app/*',
-    '!app/*.html'
+    '!app/*.html',
+    '!app/**/*.html'
   ], {
     dot: true
   }).pipe(dest('dist'));
@@ -169,6 +170,7 @@ function startAppServer() {
 
   watch([
     'app/*.html',
+    'app/**/*.html',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', server.reload);
