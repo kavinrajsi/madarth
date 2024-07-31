@@ -1,6 +1,6 @@
 
 .home__intro {
-  @include interpolate("padding-top", 768px, 40px, 992px, 80px, "ease-in");
+  @include interpolate("padding-top", 768px, 40px, 992px, 240px, "ease-in");
   @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
 
     h1 {
@@ -79,6 +79,15 @@
 
     @include interpolate("font-size", 768px, 24px, 992px, 28px, "ease-in");
     @include interpolate("line-height", 768px, 28px, 992px, 32px, "ease-in");
+  }
+
+  &.page__introduction--work{
+    h1{
+      color: #111111;
+    }
+    p{
+      color: #111111;
+    }
   }
 }
 
