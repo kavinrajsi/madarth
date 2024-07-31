@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('cssnano');
 const { argv } = require('yargs');
-// const critical = require('critical').stream;
+const critical = require('critical').stream;
 
 const $ = gulpLoadPlugins();
 const server = browserSync.create();
@@ -66,7 +66,7 @@ function lintTest() {
 };
 
 function html() {
-  return src('app/**/*.html')
+  return src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
     .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
@@ -97,8 +97,7 @@ function fonts() {
 function extras() {
   return src([
     'app/*',
-    '!app/*.html',
-    '!app/**/*.html'
+    '!app/*.html'
   ], {
     dot: true
   }).pipe(dest('dist'));
@@ -108,35 +107,35 @@ function clean() {
   return del(['.tmp', 'dist'])
 }
 
-// function criticalCss() {
-//   return src('dist/*.html')
-//   .pipe(critical(
-//     {
-//       inline: true,
-//       minify: true,
-//       ignore: ['font-face'],
-//       base: 'dist/',
-//       dimensions: [
-//         {
-//           height: 200,
-//           width: 500,
-//         },
-//         {
-//           height: 900,
-//           width: 1300,
-//         },
-//       ],
-//     }),
-//     (err, output) => {
-//       if (err) {
-//         console.error(err);
-//       } else if (output) {
-//         console.log('Generated critical CSS');
-//       }
-//     }
-//   )
-//   .pipe(dest('dist'));
-// }
+function criticalCss() {
+  return src('dist/*.html')
+  .pipe(critical(
+    {
+      inline: true,
+      minify: true,
+      ignore: ['font-face'],
+      base: 'dist/',
+      dimensions: [
+        {
+          height: 200,
+          width: 500,
+        },
+        {
+          height: 900,
+          width: 1300,
+        },
+      ],
+    }),
+    (err, output) => {
+      if (err) {
+        console.error(err);
+      } else if (output) {
+        console.log('Generated critical CSS');
+      }
+    }
+  )
+  .pipe(dest('dist'));
+}
 
 function measureSize() {
   return src('dist/**/*')
@@ -156,6 +155,19 @@ const build = series(
   measureSize
 );
 
+const vercelBuild = series(
+  clean,
+  parallel(
+    lint,
+    series(parallel(styles, scripts), html),
+    images,
+    fonts,
+    extras
+  ),
+  criticalCss,
+  measureSize
+);
+
 function startAppServer() {
   server.init({
     notify: false,
@@ -170,7 +182,6 @@ function startAppServer() {
 
   watch([
     'app/*.html',
-    'app/**/*.html',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', server.reload);
@@ -223,4 +234,5 @@ if (isDev) {
 
 exports.serve = serve;
 exports.build = build;
+exports.vercel = vercelBuild;
 exports.default = build;
