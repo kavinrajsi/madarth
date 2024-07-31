@@ -1,7 +1,7 @@
 
 .home__intro {
-    @include interpolate("padding-top", 768px, 80px, 992px, 240px, "ease-in");
-    @include interpolate("padding-bottom", 768px, 80px, 992px, 80px, "ease-in");
+  @include interpolate("padding-top", 768px, 40px, 992px, 80px, "ease-in");
+  @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
 
     h1 {
       font-family: var(--font-sans);
