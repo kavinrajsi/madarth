@@ -115,9 +115,12 @@ header {
         &.menu__active {
           height: initial;
           display: block;
-          top: -20px;
           transform: translateY(-0%);
-          transform: all .25s ease-in
+          transform: all .25s ease-in;
+          top: 0;
+          @media (min-width: 768px) {
+          top: -20px;
+          }
         }
         a {
           display: block;
