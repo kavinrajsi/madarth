@@ -1,3 +1,19 @@
+body.menu--noscroll {
+  header:before,
+  main:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
 header {
   position: sticky;
   top: 0;
@@ -24,11 +40,11 @@ header {
         display: flex;
         align-items: center;
       }
-      .header__country{
+      .header__country {
         padding-right: 8px;
       }
       .header__country,
-      #header__time {
+      .header__time {
         display: none;
         font-family: var(--font-sans);
         font-style: normal;
@@ -61,6 +77,18 @@ header {
           letter-spacing: 0.02em;
           /* Primary/Black */
           color: #111111;
+          width: 86px;
+          transition: all 0.3s ease;
+          &:hover {
+            font-family: "Anek Latin";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 26px;
+            /* identical to box height, or 93% */
+            letter-spacing: 0.02em;
+            color: #f1b91a;
+          }
         }
       }
       .header__navlist {
@@ -70,16 +98,26 @@ header {
         right: 0;
         top: 68px;
         background-color: #ffffff;
+        z-index: 12;
         margin-left: 16px;
         margin-right: 16px;
         @media (min-width: 768px) {
           top: 61px;
+          height: 0;
+          top: -180%;
+          transform: translateY(-180%);
           margin: initial;
-          width: 432px;
-          padding-top: 32px;
+          width: calc(452px + 24px + 24px);
+          left: -32px;
+          padding: 24px 32px;
+          transform: all .25s ease-in;
         }
         &.menu__active {
+          height: initial;
           display: block;
+          top: -20px;
+          transform: translateY(-0%);
+          transform: all .25s ease-in
         }
         a {
           display: block;
@@ -109,6 +147,20 @@ header {
             /* identical to box height, or 112% */
             /* Primary/Black */
             color: #111111;
+          }
+        }
+      }
+      .header__navlist--header {
+        padding-bottom: 30px;
+        .header__menu--button {
+          margin-left: 144px;
+          text-align: right;
+          button {
+            font-size: 24px;
+            line-height: 22px;
+            &:hover {
+              font-size: 24px;
+            }
           }
         }
       }
