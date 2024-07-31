@@ -93,6 +93,10 @@
 
 
 .home\:our--service {
+  .our--service__content{
+  max-width: 870px;
+  margin-left: 0;
+  }
   @include interpolate("padding-top", 768px, 40px, 992px, 80px, "ease-in");
   @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
   p {
