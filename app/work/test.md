@@ -1,6 +1,6 @@
 
 <div class="section__single">
-    <img src="../images/aha-bus-stand-ad.png" alt="">
+    <img src="../images/" alt="">
 </div>
 
 <div class="section__content">
