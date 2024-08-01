@@ -111,8 +111,9 @@
     font-family: var(--font-sans);
     font-style: normal;
     font-weight: 500;
-    font-size: 28px;
-    line-height: 32px;
+    // font-size: 28px;
+    // line-height: 32px;
+    @extend %font-size-28px;
     /* or 114% */
     color: #ffffff;
     padding-bottom: 16px;
@@ -228,8 +229,9 @@
   font-family: "Anek Tamil";
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 32px;
+  // font-size: 28px;
+  // line-height: 32px;
+  @extend %font-size-28px;
   /* identical to box height, or 114% */
   /* Primary/Black */
   color: #111111;

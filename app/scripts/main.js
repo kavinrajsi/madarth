@@ -7,6 +7,33 @@ $(document).ready(function () {
     let text = d.toLocaleTimeString();
     $('.header__time').html(text);
 
+    var $targetElement = $('header');
+    var scrollTrigger = 100; // Change this value to your desired scroll position
+
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > scrollTrigger) {
+            $targetElement.addClass('scrolled');
+        } else {
+            $targetElement.removeClass('scrolled');
+        }
+    });
+
+
+    // var video = $('#myVideo').get(0);
+    // video.muted = true;
+
+    // video.play().catch(function(error) {
+    //     // Autoplay failed, show fallback message
+    //     $('#fallback-message').show();
+    // });
+
+    // $('#playFallback').click(function(e) {
+    //     e.preventDefault();
+    //     video.play();
+    // });
+
+
+
     $('#menu, #close').click(function () {
         // Toggle 'active' class on the navList
         $('.header__navlist').toggleClass('menu__active');

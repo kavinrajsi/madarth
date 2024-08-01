@@ -21,14 +21,16 @@
     font-family: var(--font-sans);
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
-    line-height: 32px;
+    // font-size: 28px;
+    // line-height: 32px;
+    
+    @extend %font-size-28px;
+
     color: #111111;
     @media (min-width: 768px) {
       flex: 0 0 calc(100% - 20px - 250px);
       max-width: calc(100% - 20px - 250px);
     }
-
     @media (min-width: 1200px) {
       flex: 0 0 758px;
       max-width: 758px;
