@@ -10,13 +10,53 @@
   color: #fff9f9;
   padding-bottom: 30px;
 }
-.service__list{
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  .swiper-slide {
+    background-position: center;
+    background-size: contain;
+    img {
+      display: block;
+      width: 100%;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}
+.dumyd {
+  @include interpolate("padding-top", 768px, 40px, 992px, 80px, "ease-in");
+  @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
+  max-width: 870px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Desktop_H4 */
+  font-family: "Anek Tamil";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  /* or 114% */
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.service__list {
   @include interpolate("padding-top", 768px, 40px, 992px, 80px, "ease-in");
   @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
 }
+
+.service__list{
+  @include interpolate("padding-top", 768px, 40px, 992px, 120px, "ease-in");
+  @include interpolate("padding-bottom", 768px, 40px, 992px, 120px, "ease-in");
+  .service__list--title{text-align: center;}
+}
 .accordion-container {
-  border: 1px solid #d4d4d4;
-  border-radius: 20px;
+  border: 1px solid rgba($color: #d4d4d4, $alpha: 0.15);
+  border-radius: 0;
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 24px;
@@ -58,13 +98,13 @@
 
     transition: background-color 0.3s ease-out, background-image 0.3s ease-out;
     &:nth-child(1) {
-      background-image: url("../images/service-transform-family-business.png");
+      background-image: url("https://ik.imagekit.io/pixelboy/service/service-transform-family-business-v1.png");
     }
     &:nth-child(2) {
-      background-image: url("../images/service-indian-corporates.png");
+      background-image: url("https://ik.imagekit.io/pixelboy/service/service-indian-corporates-v1.png");
     }
     &:nth-child(3) {
-      background-image: url("../images/service-global-brand.png");
+      background-image: url("https://ik.imagekit.io/pixelboy/service/service-global-brand-v1.png");
     }
 
     h3,

@@ -20,8 +20,108 @@ b {
   font-weight: 600;
 }
 
+.home__intro {
+  position: relative;
+
+  h1 {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 600;
+    color: #111111;
+    @include interpolate("font-size", 768px, 52px, 992px, 80px, "ease-in");
+    @include interpolate("line-height", 768px, 52px, 992px, 80px, "ease-in");
+  }
+
+  &--content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.page__introduction {
+  position: relative;
+  .page__introduction--content {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  h1 {
+    text-align: center;
+    /* Desktop_H1 */
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 700;
+    /* Neutral/White */
+    color: #fff9f9;
+    max-width: 900px;
+    @include interpolate("font-size", 768px, 40px, 992px, 64px, "ease-in");
+    @include interpolate("line-height", 768px, 40px, 992px, 70px, "ease-in");
+
+    span {
+      margin-top: -4px;
+      @media (min-width: 768px) {
+      margin-top: -12px;
+      }
+      margin-left: -14px;
+      display: block;
+      font-family: var(--font-cursive);
+      font-style: normal;
+      font-weight: 400;
+      color: #b98f17;
+      @include interpolate("font-size", 768px, 42px, 992px, 72px, "ease-in");
+      @include interpolate("line-height", 768px, 40px, 992px, 70px, "ease-in");
+    }
+  }
+
+  p {
+    text-align: center;
+    /* Desktop_H4 */
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 400;
+    /* Neutral/White */
+    color: #fff9f9;
+    max-width: 983px;
+    padding-top: 32px;
+
+    @include interpolate("font-size", 768px, 20px, 992px, 28px, "ease-in");
+    @include interpolate("line-height", 768px, 24px, 992px, 32px, "ease-in");
+  }
+}
+
 .section__title--cta {
   display: flex;
+  justify-content: space-between;
   padding-bottom: 24px;
   margin-bottom: 40px;
   gap: 32px;

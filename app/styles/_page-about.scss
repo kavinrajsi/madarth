@@ -6,6 +6,7 @@
 .our__ethos {
   @include interpolate("padding-top", 768px, 40px, 992px, 80px, "ease-in");
   @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
+  @include interpolate("margin-bottom", 768px, 40px, 992px, 80px, "ease-in");
   .our__ethos--title {
     font-family: var(--font-cursive);
     font-style: normal;

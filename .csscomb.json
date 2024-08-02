@@ -1,0 +1,26 @@
+{
+    "sort-order": [
+      "display",
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "float",
+      "clear",
+      "overflow",
+      "width",
+      "height",
+      "margin",
+      "padding",
+      "border",
+      "background",
+      "color",
+      "font",
+      "text",
+      "list",
+      "transition",
+      "animation"
+    ]
+  }
+  

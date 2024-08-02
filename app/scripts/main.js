@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('.header__time').html(text);
 
     var $targetElement = $('header');
-    var scrollTrigger = 100; // Change this value to your desired scroll position
+    var scrollTrigger = 50; // Change this value to your desired scroll position
 
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > scrollTrigger) {

@@ -10,9 +10,7 @@
     <!-- Place favicon.ico in the root directory -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=Anek+Tamil:wght@100..800&family=Caveat:wght@400..700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=Anek+Tamil:wght@100..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css" />
     <!-- endbuild -->
@@ -35,9 +33,31 @@
         }
       }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+            if (isSafari) {
+
+                // Select all video elements
+                var videoContainers = document.querySelectorAll('video');
+
+                // Loop through the NodeList object
+                videoContainers.forEach(function (container) {
+                    // Create a new img element
+                    var gif = document.createElement('img');
+                    gif.src = './images/madarth-cover-work-mobile.gif';  // Replace with the path to your GIF
+                    gif.alt = 'Alternative content';   // Optional alt text
+
+                    // Replace the video element with the new img element
+                    container.parentNode.replaceChild(gif, container);
+                });
+            }
+        });
+    </script>
 </head>
 
-<body>
+<body class="header__dark">
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -45,10 +65,11 @@
         your experience.
       </p>
     <![endif]-->
-    <header>
+    <header class="position:fixed">
         <div class="display__container--box">
             <div class="header__logo">
                 <a href="index.html">
+                    <span class="header__logo--large">
                     <svg xmlns="http://www.w3.org/2000/svg" width="171" height="30" fill="none" viewBox="0 0 171 30">
                         <g clip-path="url(#a)">
                             <path fill="#000"
@@ -62,12 +83,28 @@
                             </clipPath>
                         </defs>
                     </svg>
+                    </span>
+                    <span class="header__logo--mini">
+                        <svg width="93" height="77" viewBox="0 0 93 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2293_2072)">
+                            <path d="M64.36 3.50001H67.67V0.76001H42.37V3.50001H45.79C48.44 3.50001 47.66 6.34001 47.65 6.34001L42.85 24.63H25.96L21.13 6.33001C21.13 6.33001 20.35 3.50001 23.73 3.50001H27.79V0.76001H0V3.50001H3.32C3.32 3.50001 6.17 3.52001 6.17 6.35001V70.96C6.17 73.79 3.32 73.81 3.32 73.81H0.1V76.55H14.97V73.81H11.75C11.75 73.81 8.9 73.8 8.9 70.96V6.95001L27.27 76.55H31.97L49.13 11.2V70.96C49.13 73.79 46.28 73.81 46.28 73.81H41.86V76.55H67.68V73.81H64.37C64.37 73.81 61.52 73.8 61.52 70.96V6.35001C61.52 3.53001 64.37 3.50001 64.37 3.50001H64.36ZM26.69 27.39H42.14L34.44 56.74L26.7 27.39H26.69Z" fill="black"/>
+                            <path d="M81.3001 0C75.3801 0 70.5601 4.82 70.5601 10.74C70.5601 16.66 75.3801 21.48 81.3001 21.48C87.2201 21.48 92.0401 16.66 92.0401 10.74C92.0401 4.82 87.2301 0 81.3001 0ZM81.3001 19.58C76.4301 19.58 72.4601 15.61 72.4601 10.74C72.4601 5.87 76.4301 1.9 81.3001 1.9C86.1701 1.9 90.1401 5.87 90.1401 10.74C90.1401 15.61 86.1701 19.58 81.3001 19.58ZM85.8301 14.98C85.7801 14.8 85.7501 14.53 85.7401 14.16L85.6901 12.77C85.6601 12.11 85.5401 11.63 85.3001 11.32C85.1501 11.12 84.9501 10.95 84.7101 10.81C85.0201 10.59 85.2701 10.33 85.4701 10.02C85.7501 9.58 85.9001 9.03 85.9001 8.36C85.9001 7.07 85.3701 6.17 84.3201 5.68C83.7901 5.44 83.1101 5.31 82.3001 5.31H77.3401V16.17H79.2601V11.74H82.1001C82.6101 11.74 82.9901 11.79 83.2101 11.9C83.5801 12.09 83.7701 12.46 83.8001 13.04L83.8901 14.76C83.9101 15.19 83.9301 15.47 83.9601 15.62C83.9901 15.79 84.0401 15.93 84.1001 16.04L84.1701 16.18H86.3001V15.52L86.1401 15.45C86.0001 15.39 85.9001 15.24 85.8401 14.99L85.8301 14.98ZM83.5101 9.7C83.1801 9.93 82.7201 10.05 82.1401 10.05H79.2501V7.04H82.3201C82.7401 7.04 83.0801 7.1 83.3201 7.22C83.7501 7.44 83.9601 7.86 83.9601 8.5C83.9601 9.09 83.8101 9.5 83.5101 9.71V9.7Z" fill="black"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_2293_2072">
+                            <rect width="92.05" height="76.55" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                    </span>
                 </a>
             </div>
             <div class="header__content">
                 <div class="header__nav">
-                    <span class="header__country">Chennai, India</span>
-                    <span class="header__time"> </span>
+                    <span class="header__user--location">
+                        <span class="header__country">Chennai, India</span>
+                        <span class="header__time"> </span>
+                    </span>
                     <div class="header__menu--button">
                         <button id="menu">Menu</button>
                     </div>
@@ -76,34 +113,89 @@
                 <div class="header__navlist">
                     <div class="header__navlist--header">
                         <div class="header__nav">
-                            <span class="header__country">Chennai, India</span>
-                            <span class="header__time"> </span>
+                            <span class="header__logo--nav">
+                                <a href="index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="171" height="30" fill="none"
+                                        viewBox="0 0 171 30">
+                                        <g clip-path="url(#a)">
+                                            <path fill="#000"
+                                                d="M117.976 8.164h1.066v-1.64c0-5.16 3.249-5.254 3.249-5.254h1.604s1.111.009 1.111 1.111V27.57c0 1.107-1.111 1.112-1.111 1.112h-1.392v1.07h9.84v-1.07h-1.396s-1.111 0-1.111-1.112V2.377c0-1.103 1.111-1.112 1.111-1.112h1.609s3.244.095 3.244 5.255v1.64h1.066V.194h-18.89v7.97Zm-2.453 20.512c-.606 0-1.189-.397-1.537-4.147-.347-3.75-.677-8.137-5.869-9.159v-.266s6.407-.61 6.407-7.604c0-6.51-6.379-7.229-9.519-7.297V.194h-8.838v1.071h1.396s1.112.01 1.112 1.112v25.188c0 1.107-1.112 1.111-1.112 1.111h-1.391v1.071h9.84v-1.07h-1.396s-1.111 0-1.111-1.112V15.904h1.219c1.374 0 3.538.591 3.958 5.015.42 4.423.398 9.081 5.219 9.081 2.186 0 3.424-1.699 3.424-1.699l-.768-.537s-.42.912-1.025.912h-.009Zm-10.247-13.834h-1.781V2.377c0-1.103 1.112-1.112 1.112-1.112H105c3.547 0 4.464 3.14 4.464 6.425 0 3.285-1.116 7.147-4.193 7.147l.005.005ZM59.738.194h-9.054v1.071h1.513s1.112.01 1.112 1.112v25.188c0 1.107-1.112 1.111-1.112 1.111h-1.513v1.071h9.054c3.24 0 12.727-1.59 12.727-14.774S64.165.194 59.738.194Zm0 28.478h-.488s-1.111 0-1.111-1.112V2.377c0-1.103 1.111-1.112 1.111-1.112h.488c3.926 0 7.685 3.01 7.685 13.703 0 10.695-4.138 13.704-7.685 13.704ZM19.152.194l-5.729 21.823L7.667.194H0v1.071h1.297s1.107.01 1.107 1.112v25.188c0 1.107-1.107 1.111-1.107 1.111H.04v1.071h5.796v-1.07H4.581s-1.111 0-1.111-1.112V2.607l7.161 27.136h1.834l6.687-25.478V27.56c0 1.107-1.111 1.112-1.111 1.112h-1.722v1.07h10.067v-1.07h-1.293s-1.111 0-1.111-1.112V2.377c0-1.103 1.111-1.112 1.111-1.112h1.293V.195h-7.234Zm141.854 1.071h1.396V.195h-9.84v1.07h1.391s1.112.01 1.112 1.112v11.245h-9V2.377c0-1.103 1.111-1.112 1.111-1.112h1.392V.195h-9.841v1.07h1.392s1.111.01 1.111 1.112v25.188c0 1.107-1.111 1.111-1.111 1.111h-1.392v1.071h9.841v-1.07h-1.392s-1.111 0-1.111-1.112V14.693h9v12.872c0 1.107-1.112 1.111-1.112 1.111h-1.391v1.071h9.84v-1.07h-1.396s-1.111 0-1.111-1.112V2.377c0-1.103 1.111-1.112 1.111-1.112Zm-114.361 26.3L39.199.195h-1.853l-7.658 27.37c-.311 1.111-1.215 1.111-1.215 1.111h-.976v1.071h5.322v-1.07h-1.333c-1.034 0-.727-1.112-.727-1.112l1.992-7.13h7.121l1.938 7.13s.303 1.111-1.012 1.111h-1.586v1.071h9.827v-1.07h-1.057s-1.04 0-1.342-1.112h.005Zm-13.59-8.2 3.311-11.833 3.221 11.832h-6.533Zm59.096 8.2L84.705.195h-1.853l-7.658 27.37c-.312 1.111-1.22 1.111-1.22 1.111H73v1.071h5.322v-1.07h-1.333c-1.03 0-.728-1.112-.728-1.112l1.997-7.13h7.121l1.943 7.13s.294 1.111-1.017 1.111h-1.581v1.071h9.827v-1.07h-1.057s-1.04 0-1.342-1.112Zm-13.59-8.2 3.311-11.833 3.217 11.832H78.56Zm88.635-13.537a2.915 2.915 0 1 1 2.914-2.914 2.916 2.916 0 0 1-2.914 2.914Zm0-5.444a2.532 2.532 0 0 0-2.53 2.53 2.532 2.532 0 0 0 2.53 2.53 2.532 2.532 0 0 0 2.53-2.53 2.532 2.532 0 0 0-2.53-2.53Z" />
+                                            <path fill="#000"
+                                                d="M166.161 1.477h1.306c.217 0 .393.032.533.095.267.122.398.348.398.678a.772.772 0 0 1-.109.425.767.767 0 0 1-.298.262.573.573 0 0 1 .253.18c.059.077.09.195.095.362l.013.384c0 .108.014.19.028.244.022.09.063.149.126.176v.063h-.479c-.013-.022-.022-.058-.032-.095a1.662 1.662 0 0 1-.018-.226l-.022-.478c-.009-.19-.077-.312-.203-.38a.802.802 0 0 0-.339-.054h-.863v1.233h-.389V1.477Zm1.265 1.315a.724.724 0 0 0 .42-.108c.104-.073.154-.204.154-.393 0-.204-.072-.344-.217-.42a.674.674 0 0 0-.312-.06h-.926v.981h.881Z" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="a">
+                                                <path fill="#fff" d="M0 0h170.11v30H0z" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </span>
+                            <span class="header__user--location">
+                                <span class="header__country">Chennai, India</span>
+                                <span class="header__time"> </span>
+                            </span>
                             <div class="header__menu--button">
                                 <button id="close">Close</button>
                             </div>
                         </div>
                     </div>
-                    <ul>
+                    <ul class="header__navlist--menu">
                         <li><a href="work.html">Work</a></li>
                         <li><a href="service.html">Services</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="https://www.notion.so/Join-us-at-Madarth-92efb528be6c43d1b1425ab83020f175" target="_blank">Career</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
+                    <div class="header__navlist--social">
+                        <nav>
+                            <a href="https://in.linkedin.com/company/madarth" target="_blank">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.1166 13.7391C15.1166 14.6998 14.3444 15.4783 13.3914 15.4783C12.4383 15.4783 11.6661 14.6998 11.6661 13.7391C11.6661 12.7791 12.4383 12 13.3914 12C14.3444 12 15.1166 12.7791 15.1166 13.7391ZM15.1305 16.8696H11.6522V28H15.1305V16.8696ZM20.6832 16.8696H17.2272V28H20.6839V22.1572C20.6839 18.9085 24.878 18.6428 24.878 22.1572V28H28.3479V20.9523C28.3479 15.4706 22.1413 15.6703 20.6832 18.3687V16.8696Z" fill="#111111"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/madarth.agency" target="_blank">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.6867 12.056C15.8355 12.0961 15.2543 12.232 14.7461 12.4316C14.2202 12.6366 13.7744 12.9116 13.3309 13.3568C12.8874 13.8019 12.6143 14.248 12.4107 14.7747C12.2138 15.284 12.0803 15.8657 12.0427 16.7174C12.0051 17.5691 11.9968 17.8429 12.001 20.0153C12.0051 22.1878 12.0147 22.4601 12.056 23.3136C12.0967 24.1646 12.232 24.7458 12.4317 25.2541C12.637 25.78 12.9117 26.2256 13.357 26.6693C13.8023 27.113 14.248 27.3854 14.776 27.5893C15.2848 27.7859 15.8667 27.92 16.7183 27.9573C17.5698 27.9946 17.8439 28.0032 20.0157 27.999C22.1876 27.9949 22.461 27.9853 23.3143 27.9448C24.1676 27.9043 24.7457 27.768 25.2541 27.5693C25.7801 27.3635 26.226 27.0893 26.6693 26.6438C27.1127 26.1984 27.3857 25.752 27.589 25.225C27.7861 24.7162 27.9201 24.1342 27.957 23.2833C27.9943 22.4294 28.0031 22.1568 27.9989 19.9846C27.9948 17.8125 27.985 17.5401 27.9445 16.687C27.9041 15.8339 27.7685 15.2545 27.569 14.7459C27.3634 14.22 27.089 13.7747 26.6439 13.3307C26.1988 12.8867 25.7521 12.6139 25.2252 12.411C24.7161 12.214 24.1345 12.0798 23.2829 12.043C22.4314 12.0062 22.1573 11.9968 19.9847 12.0009C17.812 12.0051 17.54 12.0144 16.6867 12.056ZM16.7802 26.5181C16.0002 26.4842 15.5767 26.3546 15.2944 26.2461C14.9207 26.1021 14.6544 25.928 14.3731 25.6494C14.0919 25.3709 13.9191 25.1037 13.7731 24.7307C13.6635 24.4485 13.5315 24.0254 13.4951 23.2454C13.4554 22.4024 13.4471 22.1493 13.4424 20.0134C13.4378 17.8776 13.4459 17.6248 13.4829 16.7814C13.5162 16.002 13.6466 15.578 13.7549 15.296C13.8989 14.9217 14.0723 14.656 14.3515 14.3748C14.6307 14.0937 14.8971 13.9206 15.2704 13.7747C15.5523 13.6646 15.9754 13.5337 16.7551 13.4966C17.5988 13.4566 17.8516 13.4486 19.9871 13.444C22.1226 13.4393 22.376 13.4473 23.2201 13.4844C23.9994 13.5184 24.4236 13.6475 24.7053 13.7564C25.0793 13.9004 25.3453 14.0734 25.6265 14.3531C25.9076 14.6328 26.0809 14.8982 26.2268 15.2723C26.337 15.5534 26.4679 15.9763 26.5047 16.7564C26.5449 17.6001 26.554 17.8531 26.5578 19.9885C26.5617 22.1238 26.5541 22.3774 26.5172 23.2205C26.4831 24.0005 26.3538 24.4242 26.2452 24.7067C26.1012 25.0803 25.9276 25.3467 25.6482 25.6277C25.3689 25.9086 25.1028 26.0818 24.7293 26.2277C24.4477 26.3376 24.0242 26.4688 23.2452 26.5059C22.4015 26.5456 22.1487 26.5539 20.0124 26.5586C17.876 26.5632 17.6239 26.5546 16.7802 26.5181ZM23.302 15.7243C23.3023 15.9142 23.3589 16.0997 23.4647 16.2574C23.5704 16.4151 23.7206 16.5379 23.8962 16.6102C24.0717 16.6826 24.2648 16.7013 24.4509 16.6639C24.6371 16.6265 24.808 16.5348 24.942 16.4003C25.0761 16.2657 25.1672 16.0945 25.2039 15.9082C25.2406 15.7219 25.2212 15.5289 25.1482 15.3536C25.0752 15.1783 24.9518 15.0286 24.7938 14.9234C24.6357 14.8182 24.4499 14.7623 24.2601 14.7627C24.0055 14.7632 23.7616 14.8648 23.5819 15.0451C23.4022 15.2254 23.3015 15.4697 23.302 15.7243ZM15.8923 20.008C15.8968 22.2768 17.7394 24.1118 20.0077 24.1075C22.276 24.1032 24.1124 22.2608 24.1081 19.992C24.1037 17.7232 22.2607 15.8876 19.992 15.8921C17.7234 15.8966 15.888 17.7395 15.8923 20.008ZM17.3333 20.0051C17.3323 19.4777 17.4876 18.9618 17.7798 18.5227C18.072 18.0835 18.4878 17.7409 18.9746 17.5381C19.4615 17.3353 19.9976 17.2814 20.5151 17.3833C21.0326 17.4852 21.5083 17.7382 21.882 18.1104C22.2556 18.4826 22.5106 18.9573 22.6145 19.4744C22.7184 19.9915 22.6667 20.5278 22.4658 21.0155C22.2649 21.5031 21.9239 21.9203 21.486 22.2142C21.048 22.5081 20.5327 22.6655 20.0053 22.6665C19.6551 22.6673 19.3082 22.599 18.9844 22.4657C18.6605 22.3323 18.3661 22.1365 18.118 21.8893C17.8699 21.6422 17.6729 21.3486 17.5382 21.0253C17.4036 20.702 17.334 20.3553 17.3333 20.0051Z" fill="#111111"/>
+                                    </svg>
+                            </a>
+                            <a href="https://www.facebook.com/madarth.agency" target="_blank">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.7174 17.1809H21.1854V15.5203C21.1854 14.8966 21.5987 14.7512 21.8898 14.7512C22.1803 14.7512 23.6766 14.7512 23.6766 14.7512V12.0096L21.2159 12C18.4842 12 17.8625 14.0448 17.8625 15.3533V17.1809H16.2827V20.006H17.8625C17.8625 23.6315 17.8625 28 17.8625 28H21.1854C21.1854 28 21.1854 23.5885 21.1854 20.006H23.4276L23.7174 17.1809Z" fill="#111111"/>
+                                </svg>
+                            </a>
+                            <a href="https://x.com/madarth_agency" target="_blank">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.4894 18.7749L27.3177 12H25.9366L20.8759 17.8826L16.8339 12H12.172L18.2842 20.8955L12.172 28H13.5532L18.8974 21.7878L23.166 28H27.828L21.4891 18.7749H21.4894ZM19.5977 20.9738L18.9784 20.0881L14.0509 13.0397H16.1723L20.1489 18.728L20.7682 19.6137L25.9372 27.0075H23.8158L19.5977 20.9742V20.9738Z" fill="#111111"/>
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
                 </div>
 
             </div>
         </div>
     </header>
     <main>
-        <section class="display__container--box page__introduction page__introduction--work">
-            <h1 data-aos="fade-up" >Unified approach with<br>
-                <span data-aos="fade-up" data-aos-delay="200" >creative synergy</span>
-            </h1>
-            <p data-aos="fade-up" data-aos-delay="300"  >Like any self-respecting agency worth its weight in salt, we celebrate big ideas. And we go to great
-                lengths to make them work on omni-channel, carefully optimising every platform for maximum traction and
-                results. Our secret sauce however, is something we’ll save up for a conversation over kaapi.</p>
+        <section class="display__container--fluid page__introduction padding:left:0px padding:right:0px">
+            <div class="ratio ratio-100vh">
+                <video class="cover-video" preload="none" autoplay loop muted playsinline >
+                    <source src="./images/madarth-cover-work-desktop.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="fallback-message" style="display:none;">
+                </div>
+            </div>
+            <div class="page__introduction--content">
+                <h1 data-aos="fade-up" >Unified approach
+                    <span data-aos="fade-up" data-aos-delay="200" >with creative synergy</span>
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="300"  >Like any self-respecting agency worth its weight in salt, we celebrate big ideas. And we go to great
+                    lengths to make them work on omni-channel, carefully optimising every platform for maximum traction and
+                    results. Our secret sauce however, is something we’ll save up for a conversation over kaapi.</p>
+            </div>
         </section>
+
         <section
             class="display__container--fluid work--lists color:background:black ">
             <div class="display__container--box">
@@ -115,7 +207,7 @@
                         <div class="project__card">
                             <div class="project__card--image">
                                 <div class="project__card--image--wrapper">
-                                <img src="./images/page-annapoorna.png" alt="">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/annapoorna/annapoorna-masala-project-cover.png" alt="annapoorna masala">
                                 </div>
                             </div>
                             <div class="project__content">
@@ -135,8 +227,8 @@
                     <a href="./work/aha.html" class="project--list" data-aos="fade-up" >
                         <div class="project__card">
                             <div class="project__card--image">
-                                 <div class="project__card--image--wrapper">
-                                <img src="./images/page-aha.png" alt="">
+                                <div class="project__card--image--wrapper">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/aha/aha-project-cover.png" alt="aha">
                                 </div>
                             </div>
                             <div class="project__content">
@@ -156,8 +248,8 @@
                     <a href="./work/sundari-silks.html" class="project--list" data-aos="fade-up" >
                         <div class="project__card">
                             <div class="project__card--image">
-                                 <div class="project__card--image--wrapper">
-                                <img src="./images/page-sundarisilks.png" alt="">
+                                <div class="project__card--image--wrapper">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/sundarisilks/sundarisilks-project-cover.jpg" alt="sundarisilks">
                                 </div>
                             </div>
                             <div class="project__content">
@@ -179,7 +271,7 @@
                         <div class="project__card">
                             <div class="project__card--image">
                                 <div class="project__card--image--wrapper">
-                                <img src="./images/page-amul.png" alt="">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/amul/amul-project-cover.jpg" alt="amul">
                                 </div>
                             </div>
                             <div class="project__content">
@@ -200,7 +292,7 @@
                         <div class="project__card">
                             <div class="project__card--image">
                                 <div class="project__card--image--wrapper">
-                                <img src="./images/page-nova.png" alt="">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/csk/csk-project-cover.jpg" alt="chennai super kings">
                                 </div>
                             </div>
                             <div class="project__content">
@@ -221,7 +313,7 @@
                         <div class="project__card">
                             <div class="project__card--image">
                                 <div class="project__card--image--wrapper">
-                                <img src="./images/page-nova.png" alt="">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/nova/nova-project-cover.jpg" alt="nova">
                                 </div>
                             </div>
                             <div class="project__content">
@@ -242,7 +334,7 @@
                         <div class="project__card">
                             <div class="project__card--image">
                                 <div class="project__card--image--wrapper">
-                                <img src="./images/page-nova.png" alt="">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/nttf/nttf-project-cover.gif" alt="nttf">
                                 </div>
                             </div>
                             <div class="project__content">
@@ -254,7 +346,6 @@
                                 </div>
                                 <div class="project__card--tags">
                                     <span>Branding</span>
-                                    <span>UI/UX</span>
                                     <span>Website</span>
                                 </div>
                             </div>
@@ -264,7 +355,7 @@
                         <div class="project__card">
                             <div class="project__card--image">
                                 <div class="project__card--image--wrapper">
-                                <img src="./images/page-race.png" alt="">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/race/race-project-cover.png" alt="race">
                                 </div>
                             </div>
                             <div class="project__content">
@@ -277,6 +368,48 @@
                                 <div class="project__card--tags">
                                     <span>Branding</span>
                                     <span>UI/UX</span>
+                                    <span>Website</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <div class="project__card--image--wrapper">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/jsk/jsk-project-cover.jpg" alt="jsk">
+                                </div>
+                            </div>
+                            <div class="project__content">
+                                <div class="project__card--name">
+                                    JSK
+                                </div>
+                                <div class="project__card--title">
+                                    Lorem ipsum dolor sit amet consectetur. Mauris tincidunt id pellentesque
+                                </div>
+                                <div class="project__card--tags">
+                                    <span>Branding</span>
+                                    <span>Website</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)" class="project--list" data-aos="fade-up" >
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <div class="project__card--image--wrapper">
+                                    <img src="https://ik.imagekit.io/pixelboy/tr:w-806,h-456,f-auto/dheepam/dheepam-project-cover.jpg" alt="deepam">
+                                </div>
+                            </div>
+                            <div class="project__content">
+                                <div class="project__card--name">
+                                    Dheepam
+                                </div>
+                                <div class="project__card--title">
+                                    Lorem ipsum dolor sit amet consectetur. Mauris tincidunt id pellentesque
+                                </div>
+                                <div class="project__card--tags">
+                                    <span>Branding</span>
                                     <span>Website</span>
                                 </div>
                             </div>

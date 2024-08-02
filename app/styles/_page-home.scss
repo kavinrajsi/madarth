@@ -1,105 +1,15 @@
-.home__intro {
-  // @include interpolate("padding-top", 768px, 40px, 992px, 240px, "ease-in");
-  // @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
-  // height: calc(100vh - 98px);
-  // display: flex;
-  // align-items: center;
-  position: relative;
 
-  h1 {
-    font-family: var(--font-sans);
-    font-style: normal;
-    font-weight: 600;
-    color: #111111;
-    @include interpolate("font-size", 768px, 52px, 992px, 80px, "ease-in");
-    @include interpolate("line-height", 768px, 52px, 992px, 80px, "ease-in");
-    //   max-width: 900px;
-  }
-
-
-  &--content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    // height: calc(100vh - 98px);
-    // background: yellow;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-.page__introduction {
-  @include interpolate("padding-top", 768px, 40px, 992px, 80px, "ease-in");
-  @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
-  h1 {
-    /* Desktop_H1 */
-    font-family: var(--font-sans);
-    font-style: normal;
-    font-weight: 700;
-    /* Neutral/White */
-    color: #fff9f9;
-    max-width: 900px;
-
-    @include interpolate("font-size", 768px, 40px, 992px, 64px, "ease-in");
-    @include interpolate("line-height", 768px, 40px, 992px, 70px, "ease-in");
-    br {
-      display: none;
-      @media (min-width: 768px) {
-        display: block;
-      }
-    }
-    span {
-      // display: block;
-      font-family: var(--font-cursive);
-      font-style: normal;
-      font-weight: 400;
-      color: #b98f17;
-      @include interpolate("font-size", 768px, 40px, 992px, 64px, "ease-in");
-      @include interpolate("line-height", 768px, 40px, 992px, 70px, "ease-in");
-    }
-  }
-
-  p {
-    /* Desktop_H4 */
-    font-family: var(--font-sans);
-    font-style: normal;
-    font-weight: 400;
-    /* Neutral/White */
-    color: #fff9f9;
-    max-width: 983px;
-    padding-top: 24px;
-
-    @include interpolate("font-size", 768px, 24px, 992px, 28px, "ease-in");
-    @include interpolate("line-height", 768px, 28px, 992px, 32px, "ease-in");
-  }
-
-  &.page__introduction--work {
-    h1 {
-      color: #111111;
-    }
-    p {
-      color: #111111;
-    }
-  }
-}
 
 .home\:our--service {
   background-color: #f1b91a;
   .our--service__content {
     max-width: 870px;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
-  @include interpolate("padding-top", 768px, 40px, 992px, 80px, "ease-in");
-  @include interpolate("padding-bottom", 768px, 40px, 992px, 80px, "ease-in");
+  @include interpolate("padding-top", 768px, 40px, 992px, 120px, "ease-in");
+  @include interpolate("padding-bottom", 768px, 40px, 992px, 120px, "ease-in");
   a {
     position: relative;
     &:before {
